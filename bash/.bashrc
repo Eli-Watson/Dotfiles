@@ -1,11 +1,6 @@
 #
 # ~/.bashrc
 #
-
-#This is my Startup configuration
-#figlet -c "Alacritty"
-#fortune | cowsay -f dragon 
-
 ## Colors?  Used for the prompt.
 #Regular text color
 BLACK='\[\e[0;30m\]'
@@ -63,3 +58,7 @@ RC="${BWHITE}"
 DF='\[\e[0m\]'
 PS1="${UC}\u${RC}@${HC}\h ${RC}\w${DF} ${SC}${DF}"
 }
+
+#figlet -c "Alacritty"
+fortune | cowsay -f moose
+
