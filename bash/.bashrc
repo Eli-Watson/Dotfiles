@@ -61,5 +61,5 @@ HC="${RED}"
 RC="${BWHITE}"
 #default color
 DF='\[\e[0m\]'
-PS1="${UC}\u${RC}@${HC}\h ${RC}\W${DF} ${SC}${DF}"
+PS1="${UC}\u${RC}@${HC}\h ${RC}\w${DF} ${SC}${DF}"
 }
