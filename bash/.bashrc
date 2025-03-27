@@ -62,3 +62,6 @@ PS1="${UC}\u${RC}@${HC}\h ${RC}\w${DF} ${SC}${DF}"
 #figlet -c "Alacritty"
 fortune | cowsay -f moose
 
+#Alias
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
