@@ -61,3 +61,7 @@ else
     echo "$icon $battery_percent%"
 fi
 
+# I have no idea if this works, this is my first attempt at a bash script!
+if [ "$battery_percent" -lt 15 ]; then
+	exec dunstify --urgency=critical "Battery is Low! Plug in your charger!"
+fi
