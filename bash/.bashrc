@@ -1,7 +1,6 @@
 #
 # ~/.bashrc
 #
-## Colors?  Used for the prompt.
 #Regular text color
 BLACK='\[\e[0;30m\]'
 #Bold text color
@@ -64,4 +63,3 @@ fortune | cowsay -f moose
 
 #Alias
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
-alias cls='ls --color'

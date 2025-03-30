@@ -23,7 +23,7 @@ set $terminal alacritty
 
 # keybinding to lock screen. uses the dracula variant of i3lock-color
 bindsym $mod+l exec --no-startup-id ~/.config/i3/lock
-#bindsym $mod+shift+l --no-startuo-id ~/.config/i3/lock && systemctl suspend
+#Note, followed this guide: https://gist.github.com/Raymo111/91ffd256b7aca6a85e8a99d6331d3b7b to make i3 lock appear after resuming from suspend.
 
 # Feh Wallpaper
 #Uncomment to cycle through wallpapers, The one I have set goes best with the dracula theme I am using
