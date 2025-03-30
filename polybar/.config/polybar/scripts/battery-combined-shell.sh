@@ -61,8 +61,7 @@ else
     echo "$icon $battery_percent%"
 fi
 
-# I have no idea if this works, this is my first attempt at a bash script!
-#	exec dunstify --urgency=critical "Battery is Low! Plug in your charger! 
+#Sends a notification over dunst if the battery is bellow 15 and the power is not plugged in. 
 if [ "$battery_percent" -lt 15 ] && [ "$ac" -eq 0 ]; then
 	exec dunstify --urgency=critical "Battery is Low! Plug in your charger!"
 fi
