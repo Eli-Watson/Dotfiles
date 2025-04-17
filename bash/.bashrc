@@ -63,3 +63,5 @@ fortune | cowsay -f moose
 
 #Alias
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+
