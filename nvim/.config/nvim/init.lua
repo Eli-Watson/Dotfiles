@@ -83,6 +83,7 @@ require("lazy").setup({
             vim.cmd.colorscheme("dracula")
     end
     },
+
     -- Startup Screen: Alpha
     {
     'goolord/alpha-nvim',
