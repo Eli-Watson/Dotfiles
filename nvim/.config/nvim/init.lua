@@ -83,6 +83,13 @@ require("lazy").setup({
             vim.cmd.colorscheme("dracula")
     end
     },
-
+    -- Startup Screen: Alpha
+    {
+    'goolord/alpha-nvim',
+    dependencies = { 'echasnovski/mini.icons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+};
 })
 
