@@ -2,6 +2,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 -- Neovim Config by Eli Watson
+local wrap = vim.opt
 vim.wrap = false
 vim.opt.number = true
 vim.cmd("set shiftwidth=4")
