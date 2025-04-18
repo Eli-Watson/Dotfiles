@@ -1,5 +1,9 @@
+-- File to configure all of my lsp stuff
+-- mason, nvim-lspconfig, and mason-lspconfig
+-- they are all in one file for simplicity
 return {
     {
+
         "williamboman/mason.nvim",
         config = function()
             require("mason").setup()
@@ -29,9 +33,6 @@ return {
         "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require("lspconfig")
-            -- manual lsp server setups
-            -- lspconfig.lua_ls.setup({})
-
             --keymaps
             --Shows info about an error when hovering over it
             vim.keymap.set('n', "K", vim.lsp.buf.hover, {})

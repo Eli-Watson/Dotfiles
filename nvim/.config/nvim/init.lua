@@ -1,9 +1,15 @@
+--                       _
+-- _ __   ___  _____   _(_)_ __ ___
+--| '_ \ / _ \/ _ \ \ / / | '_ ` _ \
+--| | | |  __/ (_) \ V /| | | | | | |
+--|_| |_|\___|\___/ \_/ |_|_| |_| |_|
+-- Eli Watson's Nvim config
+-- uses lazy for loading plugins, they are all in their own lua file under /plugins/
+
+-- Normal vim stuff
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
--- Neovim Config by Eli Watson
-local wrap = vim.opt
-vim.wrap = false
 vim.opt.number = true
 vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "

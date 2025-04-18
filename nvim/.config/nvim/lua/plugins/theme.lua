@@ -1,4 +1,4 @@
--- uncomment for the theme you want
+-- uncomment for the theme you want, dont forget to change the lua line theme when you do
 return {
     'sainnhe/gruvbox-material',
     lazy = false,
