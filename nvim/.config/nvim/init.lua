@@ -14,7 +14,8 @@ vim.opt.number = true
 vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-
+local opt = vim.opt
+opt.wrap = false
 
 
 -- Bootstrap lazy.nvim

@@ -2,6 +2,7 @@
 -- mason, nvim-lspconfig, and mason-lspconfig
 -- they are all in one file for simplicity
 return {
+
     {
 
         "williamboman/mason.nvim",
@@ -12,6 +13,7 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
             require("mason-lspconfig").setup({
                 ensure_installed = { "lua_ls", "denols", "harper_ls", "html", "bashls", "pyright", "cssls" },
             })
@@ -20,6 +22,7 @@ return {
             require("mason-lspconfig").setup_handlers({
                 function(server_name)
                     require("lspconfig")[server_name].setup({})
+                    capabilities = capabilities
                 end,
                 -- you can provide a dedicated handler for specific servers
                 -- ["rust_analyzer"] = function()
