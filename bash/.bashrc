@@ -1,6 +1,23 @@
 #
 # ~/.bashrc
-#
+
+#Bash Stuff
+export EDITOR='nvim'
+
+#Alias
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+
+# Non Bash Stuff
+# Tmuxifer
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
+#figlet -c "Alacritty"
+fortune | cowsay -f moose
+
+
+# Prompt
 #Regular text color
 BLACK='\[\e[0;30m\]'
 #Bold text color
@@ -57,11 +74,5 @@ RC="${BWHITE}"
 DF='\[\e[0m\]'
 PS1="${UC}\u${RC}@${HC}\h ${RC}\w${DF} ${SC}${DF}"
 }
-
-#figlet -c "Alacritty"
-fortune | cowsay -f moose
-
-#Alias
-alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 
 
