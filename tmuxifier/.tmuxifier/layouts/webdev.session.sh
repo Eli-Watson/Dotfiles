@@ -7,7 +7,6 @@ session_root "~/Gitub/"
 if initialize_session "webdev"; then
 
   # Create a new window inline within session layout definition.
-    new_window "bash"
     new_window "nvim"
     new_window "server"
     

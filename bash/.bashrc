@@ -16,6 +16,17 @@ eval "$(tmuxifier init -)"
 #figlet -c "Alacritty"
 fortune | cowsay -f moose
 
+# Tmux
+# Auto-start or attach to a tmux session
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#  tmux has-session -t default 2>/dev/null
+#  if [ $? != 0 ]; then
+#    tmux new-session -s default
+#  else
+#    tmux attach-session -t default
+#  fi
+#fi
+
 
 # Prompt
 #Regular text color
