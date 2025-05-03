@@ -15,7 +15,7 @@ return {
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "denols", "harper_ls", "html", "bashls", "pyright", "cssls" },
+                ensure_installed = { "lua_ls", "denols", "harper_ls", "html", "bashls", "pyright", "cssls", "clangd" },
             })
 
             -- automatic installation of lsp servers

@@ -10,6 +10,7 @@ return {
                 null_ls.builtins.formatting.prettier, --JS
                 null_ls.builtins.formatting.black, --python
                 null_ls.builtins.formatting.isort, --python (Imports)
+                null_ls.builtins.formatting.clang_format,
                 -- null_ls.builtins.diagnostics.eslint_d,
             },
         })
