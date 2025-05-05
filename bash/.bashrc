@@ -1,20 +1,24 @@
-#
 # ~/.bashrc
 
 #Bash Stuff
 export EDITOR='nvim'
 
+# add custom scripts dir
+export PATH="$HOME/bin:$PATH"
+
 #Alias
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 
+## Non Bash Stuff
 
-# Non Bash Stuff
 # Tmuxifer
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
-#figlet -c "Alacritty"
+# Runs the fortune program on madlib passed through to coysay so it displays a moose
 fortune | cowsay -f moose
+# Same thing but runs my madlib program
+#~/bin/madlib | cowsay -f moose
 
 # Tmux
 # Auto-start or attach to a tmux session
@@ -26,7 +30,6 @@ fortune | cowsay -f moose
 #    tmux attach-session -t default
 #  fi
 #fi
-
 
 # Prompt
 #Regular text color
