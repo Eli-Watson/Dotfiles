@@ -28,10 +28,6 @@ bindsym $mod+l exec --no-startup-id ~/.config/i3/lock
 # Feh Wallpaper
 #Uncomment to cycle through wallpapers, The one I have set goes best with the dracula theme I am using
 exec_always feh --bg-fill --randomize ~/wallpapers/
-#exec feh --bg-fill ~/wallpapers/Eragon_VS_Galbatorix.jpg
-# keybind to refresh wallpaper (dosen't work and I dont know why)
-#bindsym $mod+Shift+w exec_always feh --bg-center --randomize ~/wallpapers/
-
 
 #Picom (x11 compositor)
 exec_always picom
