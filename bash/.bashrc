@@ -8,6 +8,7 @@ export PATH="$HOME/bin:$PATH"
 
 #Alias
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+alias ls='ls --color=auto'
 
 ## Non Bash Stuff
 

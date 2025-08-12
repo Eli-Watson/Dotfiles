@@ -1,4 +1,4 @@
- general.import = ["~/.config/alacritty/gruvbox.toml"]
+ general.import = ["~/.config/alacritty/dracula.toml"]
 # shell.program = ["/]
 [window]
 opacity = 0.9
