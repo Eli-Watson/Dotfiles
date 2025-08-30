@@ -1,5 +1,5 @@
  general.import = ["~/.config/alacritty/dracula.toml"]
 # shell.program = ["/]
 [window]
-opacity = 0.9
+opacity = 0.8
 

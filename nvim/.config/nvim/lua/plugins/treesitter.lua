@@ -16,6 +16,7 @@ return {
                     "lua",
                     "python",
                     "c",
+                    "perl"
                 },
                 highlight = { enable = true },
                 indent = { enable = true },

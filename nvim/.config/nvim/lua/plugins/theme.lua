@@ -1,13 +1,15 @@
 -- uncomment for the theme you want, dont forget to change the lua line theme when you do
 return {
+    {
     'sainnhe/gruvbox-material',
-    lazy = false,
-    priority = 1000,
-    config = function()
+        lazy = false,
+        priority = 1000,
+        config = function()
         -- Optionally configure and load the colorscheme
         -- directly inside the plugin declaration.
-        vim.g.gruvbox_material_enable_italic = true
-        vim.cmd.colorscheme('gruvbox-material')
-    end    
+            vim.g.gruvbox_material_enable_italic = true
+            vim.cmd.colorscheme('gruvbox-material')
+        end,
+    },    
 }
 
