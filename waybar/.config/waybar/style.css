@@ -62,7 +62,8 @@ window#waybar {
 #playerctl,
 #pulseaudio,
 #custom-multi-battery,
-#clock {
+#clock,
+#custom-notification { 
   padding: 0 9px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;

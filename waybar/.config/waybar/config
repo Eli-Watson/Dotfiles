@@ -18,7 +18,8 @@
     "network",
     "bluetooth",
     "pulseaudio",
-    "clock"
+    "clock",
+    "custom/notification"
   ],
 
   // ---- Hyprland ----
@@ -97,12 +98,32 @@
   "clock": {
     "format": "{:%d/%m/%Y %I:%M %p}",
     "tooltip-format": "{:%Y-%m-%d %H:%M:%S}",
-    "on-click": "alacritty -e timedatectl"
   },
 
   // ---- Tray ----
   "tray": {
     "spacing": 8
-  }
+  },
+    // --- Sway NC --
+    "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 }
 
