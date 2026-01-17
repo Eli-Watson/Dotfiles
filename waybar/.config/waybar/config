@@ -19,8 +19,8 @@
     "bluetooth",
     "pulseaudio",
     "clock",
-    "custom/notification",
     "custom/updates",
+    "custom/notification",
   ],
 
   // ---- Hyprland ----
