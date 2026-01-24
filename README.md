@@ -1,13 +1,13 @@
 # Dotfiles
 My Current Tech Stack
 - Arch Linux
+- Hyprland
 - Waybar
-- Polybar
 - Rofi
-- Alacritty
+- Gostty
 - Bash
 - Neovim
-- Dunst + SwayNC
+- SwayNC
 
 Feel free to use these configs as you see fit, this repo is mostly for me to save my own files between machines.
 The perculair folder setup is because I use GNU Stow to manage my dotfiles.
