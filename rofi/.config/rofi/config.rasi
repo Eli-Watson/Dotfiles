@@ -145,4 +145,6 @@ element-text, element-icon {
 
 //@theme "/usr/share/rofi/themes/sidebar.rasi"
 
-@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

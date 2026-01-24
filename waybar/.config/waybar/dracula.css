@@ -1,0 +1,113 @@
+/* Dracula theme for Waybar (Hyprland, interactive) */
+@define-color background #282a36;
+@define-color background-alt #44475a;
+@define-color foreground #f8f8f2;
+@define-color primary #bd93f9;
+@define-color secondary #ffb86c;
+@define-color alert #ff5555;
+@define-color disabled #6272a4;
+
+* {
+  font-family: "MesloLGS Nerd Font Mono";
+  font-size: 14px;
+  border: none;
+  transition: all 0.2s ease-in-out; /* smooth hover transitions */
+}
+
+window#waybar {
+  background: @background;
+  color: @foreground;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* Workspaces */
+#workspaces {
+  margin-right: 14px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: @foreground;
+  background: transparent;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect on workspace */
+#workspaces button:hover {
+  background: @background-alt;
+  color: @secondary;
+}
+
+/* Active workspace stands out */
+#workspaces button.active {
+  background: @primary;
+  color: @background;
+  font-weight: bold;
+  border-bottom: 2px solid @secondary;
+}
+
+/* Pressed workspace (click animation) */
+#workspaces button:active {
+  background: @secondary;
+  color: @background;
+}
+
+/* Generic module styling */
+#cpu,
+#memory,
+#network,
+#bluetooth,
+#playerctl,
+#pulseaudio,
+#custom-multi-battery,
+#clock,
+#custom-notification { 
+  padding: 0 9px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect for all modules */
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#bluetooth:hover,
+#playerctl:hover,
+#pulseaudio:hover,
+#custom-multi-battery:hover,
+#clock:hover {
+  background: @background-alt;
+  color: @secondary;
+}
+
+/* Click (active press) feedback */
+#cpu:active,
+#memory:active,
+#network:active,
+#bluetooth:active,
+#playerctl:active,
+#pulseaudio:active,
+#custom-multi-battery:active,
+#clock:active {
+  background: @primary;
+  color: @background;
+}
+
+/* Muted audio */
+#pulseaudio.muted {
+  color: @disabled;
+}
+
+/* Tray area */
+#tray {
+  padding: 0 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#tray:hover {
+  background: @background-alt;
+}
+

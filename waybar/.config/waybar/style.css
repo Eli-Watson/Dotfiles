@@ -1,113 +1,107 @@
-/* Dracula theme for Waybar (Hyprland, interactive) */
-@define-color background #282a36;
-@define-color background-alt #44475a;
-@define-color foreground #f8f8f2;
-@define-color primary #bd93f9;
-@define-color secondary #ffb86c;
-@define-color alert #ff5555;
-@define-color disabled #6272a4;
+/* Gruvbox Material Dark theme for Waybar (Hyprland, interactive) */
 
+/* ---- Color palette ---- */
+@define-color background      #282828;
+@define-color background-alt  #32302f;
+@define-color foreground      #ffffff;
+@define-color hover           #d8a657; /* CPU hover color (yellow) */
+@define-color alert           #ea6962;
+@define-color disabled        #7c6f64;
+
+/* ---- Global ---- */
 * {
   font-family: "MesloLGS Nerd Font Mono";
   font-size: 14px;
   border: none;
-  transition: all 0.2s ease-in-out; /* smooth hover transitions */
+  color: @foreground;
+  transition: all 0.2s ease-in-out;
 }
 
 window#waybar {
   background: @background;
-  color: @foreground;
   border-radius: 6px;
   padding: 4px 8px;
 }
 
-/* Workspaces */
+/* ---- Workspaces ---- */
 #workspaces {
   margin-right: 14px;
 }
 
 #workspaces button {
   padding: 0 10px;
-  color: @foreground;
   background: transparent;
   border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  color: @foreground;
 }
 
-/* Hover effect on workspace */
+/* Workspace hover */
 #workspaces button:hover {
-  background: @background-alt;
-  color: @secondary;
+  background: @hover;
+  color: @background;
 }
 
-/* Active workspace stands out */
+/* Active workspace */
 #workspaces button.active {
-  background: @primary;
+  background: @hover;
   color: @background;
   font-weight: bold;
-  border-bottom: 2px solid @secondary;
+  border-bottom: 2px solid @background-alt;
 }
 
-/* Pressed workspace (click animation) */
+/* Click feedback */
 #workspaces button:active {
-  background: @secondary;
+  background: @alert;
   color: @background;
 }
 
-/* Generic module styling */
+/* ---- Generic modules ---- */
 #cpu,
 #memory,
 #network,
 #bluetooth,
-#playerctl,
 #pulseaudio,
 #custom-multi-battery,
 #clock,
-#custom-notification { 
+#custom-notification,
+#custom-updates,
+#tray {
   padding: 0 9px;
   border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  color: @foreground;
 }
 
-/* Hover effect for all modules */
+/* Unified hover color */
 #cpu:hover,
 #memory:hover,
 #network:hover,
 #bluetooth:hover,
-#playerctl:hover,
 #pulseaudio:hover,
 #custom-multi-battery:hover,
-#clock:hover {
-  background: @background-alt;
-  color: @secondary;
+#clock:hover,
+#custom-notification:hover,
+#custom-updates:hover,
+#tray:hover {
+  background: @hover;
+  color: @background;
 }
 
-/* Click (active press) feedback */
+/* Active (pressed) */
 #cpu:active,
 #memory:active,
 #network:active,
 #bluetooth:active,
-#playerctl:active,
 #pulseaudio:active,
 #custom-multi-battery:active,
-#clock:active {
-  background: @primary;
+#clock:active,
+#custom-notification:active,
+#custom-updates:active {
+  background: @alert;
   color: @background;
 }
 
-/* Muted audio */
+/* ---- Muted / Disabled ---- */
 #pulseaudio.muted {
   color: @disabled;
-}
-
-/* Tray area */
-#tray {
-  padding: 0 8px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-#tray:hover {
-  background: @background-alt;
 }
 
