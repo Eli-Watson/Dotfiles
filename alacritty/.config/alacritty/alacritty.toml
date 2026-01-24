@@ -1,5 +1,7 @@
- general.import = ["~/.config/alacritty/dracula.toml"]
+ general.import = ["~/.config/alacritty/gruvbox.toml"]
 # shell.program = ["/]
 [window]
 opacity = 0.8
 
+[font]
+size = 12
