@@ -4,8 +4,8 @@
 @define-color background      #282828;
 @define-color background-alt  #32302f;
 @define-color foreground      #ffffff;
-@define-color hover           #d8a657; /* CPU hover color (yellow) */
-@define-color alert           #ea6962;
+@define-color hover           #d8a657; /* (yellow) */
+@define-color alert           #ea6962; /* red, used for accents */
 @define-color disabled        #7c6f64;
 
 /* ---- Global ---- */
@@ -43,16 +43,10 @@ window#waybar {
 
 /* Active workspace */
 #workspaces button.active {
-  background: @hover;
+  background: @alert;
   color: @background;
   font-weight: bold;
   border-bottom: 2px solid @background-alt;
-}
-
-/* Click feedback */
-#workspaces button:active {
-  background: @alert;
-  color: @background;
 }
 
 /* ---- Generic modules ---- */
@@ -82,7 +76,7 @@ window#waybar {
 #custom-notification:hover,
 #custom-updates:hover,
 #tray:hover {
-  background: @hover;
+  background: @alert;
   color: @background;
 }
 

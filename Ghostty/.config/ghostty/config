@@ -5,7 +5,6 @@
 # \____|_| |_|\___/|___/\__|\__|\__, |
 #                               |___/
 #Eli Watson's Ghostty Configuration
-
 # Fonts
 # I honestly really like whatever defualt font ghostty uses so I haven't changed it
 font-size = 12
@@ -19,3 +18,12 @@ alpha-blending = linear
 # Disable window decorations (Hyprland handles this)
 window-decoration = false
 
+#Quick Terminal
+quick-terminal-position = top
+quick-terminal-size = 45%,100%
+gtk-quick-terminal-layer = top
+gtk-quick-terminal-namespace = ghostty-quick-terminal
+quick-terminal-keyboard-interactivity = exclusive
+
+#Key Binds
+keybind = global:cmd+shift+enter=toggle_quick_terminal
