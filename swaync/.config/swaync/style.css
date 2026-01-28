@@ -1,119 +1,269 @@
-/* Base text + fonts */
+/* ==================================================
+   Base
+   ================================================== */
+
 * {
+  font-family: "Noto Sans", "JetBrainsMono Nerd Font";
   font-size: 14px;
-  font-family: "Noto Sans";
-  transition: 100ms;
-  box-shadow: unset;
-  color: #ffffff; /* foreground */
+  border-radius: 12px;
 }
 
-/* Notification rows */
-.control-center .notification-row,
-.floating-notifications {
-  background-color: #282828; /* main bg */
-  border-radius: 1.159rem;
-  -gtk-outline-radius: 1.159rem;
-  margin-bottom: unset;
-  box-shadow: none;
+/* ==================================================
+   Notification Window (-t -sw)
+   ================================================== */
+
+.notification-window {
+  background: transparent;
+  padding: 8px;
 }
 
-/* Notification content background */
-.control-center .notification-row .notification-background .notification,
-.floating-notifications .notification-background .notification {
-  background-color: #32302f; /* panel bg */
-  padding: 0.818rem;
+.notification-window box {
+  min-width: 420px;
 }
 
-/* Notification text colors */
-.control-center .notification-row .notification-background .notification.low .notification-content label,
-.control-center .notification-row .notification-background .notification.normal .notification-content label,
-.floating-notifications .notification-background .notification.low .notification-content label,
-.floating-notifications .notification-background .notification.normal .notification-content label {
-  color: #ffffff; /* text */
+/* ==================================================
+   Notifications
+   ================================================== */
+
+.notification {
+  background: rgba(29, 32, 33, 0.96);
+  border: 1px solid #504945;
+  border-top: 2px solid rgba(204, 36, 29, 0.6); /* subtle red accent */
+  padding: 12px;
+  margin: 6px 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
-.control-center .notification-row .notification-background .notification.low .notification-content .body,
-.control-center .notification-row .notification-background .notification.normal .notification-content .body,
-.floating-notifications .notification-background .notification.low .notification-content .body,
-.floating-notifications .notification-background .notification.normal .notification-content .body {
-  color: #7c6f64; /* disabled / body text */
+.notification.low {
+  opacity: 0.85;
+  border-top-color: rgba(189, 174, 147, 0.4);
 }
 
-/* Critical notifications */
-.control-center .notification-row .notification-background .notification.critical .notification-content,
-.floating-notifications .notification-background .notification.critical .notification-content {
-  background-color: #ea6962; /* alert */
+.notification.critical {
+  border-top-color: #fb4934;
+  box-shadow: 0 0 0 1px rgba(251, 73, 52, 0.35),
+              0 8px 22px rgba(0, 0, 0, 0.55);
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content label,
-.floating-notifications .notification-background .notification.critical .notification-content label {
-  color: #282828; /* black text on red alert */
+/* ==================================================
+   Notification Content
+   ================================================== */
+
+.notification-content {
+  margin-left: 8px;
 }
 
-/* Close button */
-.control-center .notification-row .close-button,
-.floating-notifications .close-button {
-  color: #d8a657; /* accent hover */
+.summary {
+  color: #ebdbb2;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.control-center .notification-row .close-button:hover,
-.floating-notifications .close-button:hover {
-  background-color: rgba(216, 166, 87, 0.15); /* accent hover effect */
+.body {
+  color: #d5c4a1;
+  margin-top: 4px;
+  line-height: 1.35;
 }
 
-/* Control center */
+/* ==================================================
+   Icons / Images
+   ================================================== */
+
+.image {
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+/* ==================================================
+   Notification Action Buttons
+   ================================================== */
+
+.notification-action {
+  background: #3c3836;
+  border: 1px solid #665c54;
+  color: #ebdbb2;
+  padding: 4px 8px;
+  margin: 6px 6px 0 0;
+  font-size: 12px;
+}
+
+.notification-action:hover {
+  background: rgba(204, 36, 29, 0.18);
+  border-color: rgba(204, 36, 29, 0.6);
+}
+
+/* ==================================================
+   Control Center
+   ================================================== */
+
 .control-center {
-  background-color: #282828;
-  border-radius: 1.705rem;
-  padding: 1rem;
-  border: 1px solid rgba(128,127,132,0.15);
-  box-shadow: 0 2px 3px rgba(0,0,0,0.45);
+  background: rgba(24, 26, 27, 0.97);
+  padding: 14px;
 }
 
-/* Sliders */
-.control-center slider {
-  background-color: rgba(124,111,100,0.31); /* disabled slider bg */
+/* ==================================================
+   Widgets (General)
+   ================================================== */
+
+.widget-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ebdbb2;
 }
 
-.control-center slider:hover {
-  background-color: rgba(216,166,87,0.448); /* accent hover */
+/* ==================================================
+   Do Not Disturb
+   ================================================== */
+
+.widget-dnd {
+  margin-bottom: 12px;
 }
 
-.control-center slider:active {
-  background-color: #d8a657; /* accent active */
+.widget-dnd switch {
+  background: #cc241d;
 }
 
-/* Widget titles */
-.widget-title label,
-.widget-title button label {
-  color: #ffffff; /* foreground */
-}
+/* ==================================================
+   Media / Now Playing (MPRIS)
+   ================================================== */
 
-/* Widget buttons */
-.widget-buttons-grid>flowbox>flowboxchild>button label {
-  color: #ffffff;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background-color: rgba(216,166,87,0.15); /* accent hover */
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:checked {
-  background-color: #d8a657; /* accent */
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:checked label {
-  color: #282828; /* dark text on accent */
-}
-
-/* Volume + MPRIS widgets */
-.widget-volume,
 .widget-mpris {
-  background-color: #32302f; /* panel bg */
-  border-radius: 1.159rem;
+  background: rgba(29, 32, 33, 0.96);
+  border: 1px solid #504945;
+  border-top: 2px solid rgba(204, 36, 29, 0.6);
+  padding: 10px;
+  margin-bottom: 12px;
 }
 
-.widget-volume trough slider {
-  background-color: #d8a657; /* accent for slider handle */
+/* Album art */
+.widget-mpris image {
+  min-width: 60px;
+  min-height: 60px;
+  margin-right: 10px;
+  border-radius: 8px;
 }
+
+/* Text */
+.widget-mpris .title {
+  color: #ebdbb2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.widget-mpris .artist {
+  color: #d5c4a1;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* Controls layout */
+.widget-mpris .controls {
+  margin-top: 6px;
+}
+
+/* Compact media buttons */
+.widget-mpris button {
+  background: transparent;
+  border: none;
+  padding: 2px;
+  margin-right: 6px;
+  min-width: 24px;
+  min-height: 24px;
+  color: #ebdbb2;
+}
+
+.widget-mpris button:hover {
+  background: rgba(204, 36, 29, 0.2);
+  border-radius: 6px;
+}
+
+.widget-mpris button.play {
+  color: #cc241d;
+}
+
+/* Progress bar */
+.widget-mpris scale trough {
+  background: #3c3836;
+  min-height: 4px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.widget-mpris scale highlight {
+  background: #cc241d;
+  border-radius: 4px;
+}
+
+/* ==================================================
+   Sliders (Volume / Brightness)
+   ================================================== */
+
+scale trough {
+  background: #3c3836;
+  min-height: 8px;
+}
+
+scale highlight {
+  background: #cc241d;
+}
+
+/* ==================================================
+   Close Button
+   ================================================== */
+
+.close-button {
+  background: transparent;
+  color: #fb4934;
+}
+
+.close-button:hover {
+  background: rgba(251, 73, 52, 0.15);
+}
+/* ==================================================
+   Volume & Brightness Widgets (Bottom Controls)
+   ================================================== */
+
+.widget-volume {
+  background: rgba(29, 32, 33, 0.96);
+  border: 1px solid #504945;
+  border-top: 2px solid rgba(204, 36, 29, 0.4);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Icon + label row */
+.widget-volume label {
+  color: #ebdbb2;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Slider size refinement */
+.widget-volume scale trough {
+  background: #3c3836;
+  min-height: 6px;
+  border-radius: 6px;
+}
+
+.widget-volume scale highlight {
+  background: #cc241d;
+  border-radius: 6px;
+}
+
+/* ==================================================
+   Do Not Disturb
+   ================================================== */
+
+.widget-dnd {
+  margin-bottom: 12px;
+}
+
+.widget-dnd switch {
+  background: #cc241d;
+}
+
 
