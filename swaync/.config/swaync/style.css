@@ -126,7 +126,7 @@
   background: #cc241d;
 }
 /* ==================================================
-   Slim Media / Now Playing (MPRIS)
+   Media / Now Playing (MPRIS)
    ================================================== */
 
 .widget-mpris {
@@ -141,7 +141,7 @@
   gap: 8px;
 }
 
-/* Album art smaller */
+/* Album art  */
 .widget-mpris image {
   min-width: 48px;
   min-height: 48px;
@@ -202,7 +202,7 @@
   color: #cc241d;
 }
 
-/* Progress bar (thin) */
+/* Progress bar */
 .widget-mpris scale trough {
   background: #3c3836;
   min-height: 3px;
