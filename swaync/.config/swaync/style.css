@@ -125,78 +125,95 @@
 .widget-dnd switch {
   background: #cc241d;
 }
-
 /* ==================================================
-   Media / Now Playing (MPRIS)
+   Slim Media / Now Playing (MPRIS)
    ================================================== */
 
 .widget-mpris {
   background: rgba(29, 32, 33, 0.96);
   border: 1px solid #504945;
   border-top: 2px solid rgba(204, 36, 29, 0.6);
-  padding: 10px;
-  margin-bottom: 12px;
+  padding: 6px 8px;        /* smaller padding */
+  margin-bottom: 8px;      /* tighter margin */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Album art */
+/* Album art smaller */
 .widget-mpris image {
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 10px;
-  border-radius: 8px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 6px;
 }
 
-/* Text */
+/* Text container */
+.widget-mpris .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 2px;
+}
+
+/* Song title */
 .widget-mpris .title {
   color: #ebdbb2;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
+/* Artist */
 .widget-mpris .artist {
   color: #d5c4a1;
-  font-size: 12px;
-  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.2;
 }
 
-/* Controls layout */
+/* Controls container */
 .widget-mpris .controls {
-  margin-top: 6px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }
 
-/* Compact media buttons */
+/* Compact buttons */
 .widget-mpris button {
   background: transparent;
   border: none;
   padding: 2px;
-  margin-right: 6px;
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 20px;
+  min-height: 20px;
   color: #ebdbb2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* if using icon font */
+  border-radius: 4px;
 }
 
 .widget-mpris button:hover {
   background: rgba(204, 36, 29, 0.2);
-  border-radius: 6px;
 }
 
 .widget-mpris button.play {
   color: #cc241d;
 }
 
-/* Progress bar */
+/* Progress bar (thin) */
 .widget-mpris scale trough {
   background: #3c3836;
-  min-height: 4px;
-  border-radius: 4px;
-  margin-top: 6px;
+  min-height: 3px;
+  border-radius: 3px;
+  margin-top: 4px;
 }
 
 .widget-mpris scale highlight {
   background: #cc241d;
-  border-radius: 4px;
+  border-radius: 3px;
 }
-
 /* ==================================================
    Sliders (Volume / Brightness)
    ================================================== */
@@ -210,18 +227,6 @@ scale highlight {
   background: #cc241d;
 }
 
-/* ==================================================
-   Close Button
-   ================================================== */
-
-.close-button {
-  background: transparent;
-  color: #fb4934;
-}
-
-.close-button:hover {
-  background: rgba(251, 73, 52, 0.15);
-}
 /* ==================================================
    Volume & Brightness Widgets (Bottom Controls)
    ================================================== */
@@ -253,17 +258,4 @@ scale highlight {
   background: #cc241d;
   border-radius: 6px;
 }
-
-/* ==================================================
-   Do Not Disturb
-   ================================================== */
-
-.widget-dnd {
-  margin-bottom: 12px;
-}
-
-.widget-dnd switch {
-  background: #cc241d;
-}
-
 
