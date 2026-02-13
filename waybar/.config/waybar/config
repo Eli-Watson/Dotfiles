@@ -18,8 +18,8 @@
     "network",
     "bluetooth",
     "pulseaudio",
-    "clock",
     "custom/updates",
+    "clock",
     "custom/notification",
   ],
 
@@ -103,7 +103,9 @@
 
   // ---- Tray ----
   "tray": {
-    "spacing": 8
+    "spacing": 8,
+    "tooltip": true,
+
   },
     // --- Sway NC --
     "custom/notification": {
