@@ -91,3 +91,6 @@ PS1="${UC}\u${RC}@${HC}\h ${RC}\w${DF} ${SC}${DF}"
 }
 
 
+
+# Created by `pipx` on 2026-03-02 00:45:45
+export PATH="$PATH:/home/eli/.local/bin"
